@@ -1,0 +1,67 @@
+{
+  "name": "elrond-spa",
+  "version": "3.7.0",
+  "description": "Multiple applications, one page",
+  "main": "lib/elrond-spa.js",
+  "scripts": {
+    "build": "webpack -p",
+    "build:dev": "webpack --config webpack.config.dev.js",
+    "build:analyze": "webpack --config webpack.config.analyze.js",
+    "watch": "webpack -w --config webpack.config.dev.js",
+    "prepublish": "in-publish && yarn build || not-in-publish",
+    "clean": "rm -rf lib",
+    "test": "karma start --single-run",
+    "test:debug": "karma start",
+    "test:travis": "karma start karma-saucelabs.conf.js --single-run",
+    "lint": "eslint src"
+  },
+  "repository": "https://github.com/abeet/elrond-spa",
+  "keywords": [
+    "elrond",
+    "page",
+    "application",
+    "framework",
+    "react",
+    "angular",
+    "vue"
+  ],
+  "author": "Joel Denning",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/runtime": "^7.2.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "custom-event": "^1.0.1",
+    "eslint": "5.11.1",
+    "eslint-config-canopy": "2.1.0",
+    "in-publish": "^2.0.0",
+    "jasmine": "^3.3.1",
+    "karma": "^3.1.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-sauce-launcher": "^2.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^3.0.5",
+    "promise-polyfill": "^8.1.0",
+    "webpack": "^4.28.2",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2"
+  },
+  "browserslist": [
+    "ie >= 11",
+    "last 4 Safari major versions",
+    "last 10 Chrome major versions",
+    "last 10 Firefox major versions",
+    "last 4 Edge major versions"
+  ],
+  "ignore": [
+    "examples",
+    "docs"
+  ]
+}

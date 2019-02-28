@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "8.11.1"
+script:
+  - yarn build
+  - yarn lint
+  - yarn test:travis
+addons:
+  - sauce_connect: true
